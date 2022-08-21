@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head_content %}
+        {% endblock head_content %}
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        {% comment %} <meta charset="UTF-8"> {% endcomment %}
+        {% comment %} <meta http-equiv="X-UA-Compatible" content="IE=edge"> {% endcomment %}
+        {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
+        <title>Document</title>
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        {% include "header.html" %}
+        <div >
+            {% block container %}
+            
+            
+            {% endblock container %}
+        </div>
+        {% include 'footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+    
+    {% block container %}
+    <div class="container p-5 " >
+
+        <h4 class="mb-3">Buscar Dashboard</h4>
+        <form method="GET" action="{% url 'dibujantes:buscar' %}">
+            <div class="row g-3">
+                <input class="col-sm-6" type="text" name="busqueda" placeholder="busqueda" required>
+                
+                <div class="col-sm-3">
+                    <select class="form-select " name="parametro" id="" required>
+                        <option value="">Seleccionar...</option>
+                        <option>Cliente</option>
+                        <option>Dibujante</option>
+                        <option># Cotizacion</option>
+                    </select>
+                </div>
+            </div>
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-md" type="submit">Buscar</button>
+        </form>
+        <a class="btn btn-outline-warning mt-2 w-100" href="{% url 'dibujantes:principal' %}"> Regresar a pagina principal</a>
+    </div>
+    {% endblock container %}

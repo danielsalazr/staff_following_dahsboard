@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block container %}
+          
+    <div class="table-responsive">
+        {% comment %} <div class="col align-self-start"> {% endcomment %}
+            <a class="btn btn-warning  mt-4 w-100" href="{% url 'dibujantes:principal' %}"> Regresar a pagina principal</a>
+            <a class="btn btn-info  mt-4 w-100" href="{% url 'dibujantes:busqueda' %}"> Realizar otra busqueda</a>
+            <hr class="mb-4">
+            <table class="table table-striped table-hover table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">consecutivo_planos</th>
+                        <th scope="col">cotizacion</th>
+                        <th scope="col">version</th>
+                        <th scope="col">fecha_ingreso</th>
+                        <th scope="col">prioridad</th>
+                        <th scope="col">dibujante</th>
+                        <th scope="col">cliente_interno</th>
+                        <th scope="col">cliente_externo</th>
+                        <th scope="col">zona_venta</th>
+                        <th scope="col">descripcion_proyecto</th>
+                        <th scope="col">grado_complejidad</th>
+                        <th scope="col">visita_campo</th>
+                        <th scope="col">estado</th>
+                        <th scope="col">fecha_salida</th>
+                    </tr>
+                </thead>
+
+                
+                <tbody>
+                    {% for rows in busqueda  %}
+                    <tr>
+                        <td>{{rows.consecutivo_planos}}</td>
+                        <td>{{rows.cotizacion}}</td>
+                        <td>{{rows.version}}</td>
+                        <td>{{rows.fecha_ingreso}}</td>
+                        <td>{{rows.prioridad}}</td>
+                        <td>{{rows.cotizacion}}</td>
+                        <td>{{rows.dibujante}}</td>
+                        <td>{{rows.cliente_interno}}</td>
+                        <td>{{rows.cliente_externo}}</td>
+                        <td>{{rows.zona_venta}}</td>
+                        <td>{{rows.descripcion_proyecto}}</td>
+                        <td>{{rows.visita_campo}}</td>
+                        <td>{{rows.estado}}</td>
+                        <td>{{rows.fecha_salida}}</td>
+                    </tr>
+                    {% endfor %}             
+                </tbody>
+                
+            </table>
+        {% comment %} </div> {% endcomment %}
+    </div>
+{% endblock %}

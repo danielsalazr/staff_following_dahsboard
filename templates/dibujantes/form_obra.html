@@ -1,0 +1,147 @@
+{% extends 'index.html' %}
+
+{% block container %}
+    {% comment %} <div class="row g-5">
+        <form action="" method="POST">
+            <input type="text" placeholder="Consecutivo Planos" required=true >
+            <input type="text" placeholder="Consecutivo Planos" required=true >
+            <input type="text" placeholder="Consecutivo Planos" required=true >
+            <input type="text" placeholder="Consecutivo Planos" required=true >
+            <button></button>
+        </form> {% endcomment %}
+        <div class="col-md-10 col-lg-10 ps-5">
+          <h4 class="mb-3">Ingresar Obra</h4>
+          <form class="needs-validation" action="{% url 'dibujantes:creacion' %}" method="POST" >
+            {% csrf_token %}
+            <div class="row g-3">
+
+              <div class="col-sm-6">
+                <label for="Consecutivo_Planos" class="form-label">Consecutivo Planos</label>
+                <input type="text" name="consecutivo_planos" class="form-control" id="" placeholder=""  required >
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="#_Cotizacion" class="form-label"># Cotizacion</label>
+                <input type="text" name="cotizacion" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Version" class="form-label"># Version</label>
+                <input type="text" name="version" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Fecha_ingreso" class="form-label">Fecha ingreso</label>
+                <input type="date" name="fecha_ingreso" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Prioridad" class="form-label">Prioridad</label>
+                <input type="text" name="prioridad" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Dibujante" class="form-label">Dibujante</label>
+                <input type="text" name="dibujante" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Cliente_interno" class="form-label">Cliente interno</label>
+                <input type="text" name="cliente_interno" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Cliente_externo" class="form-label">Cliente externo</label>
+                <input type="text" name="cliente_externo" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="Zona_venta" class="form-label">Zona venta</label>
+                <input type="text" name="zona_venta" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Grado_complejidad" class="form-label">Grado de complejidad</label>
+                <input type="text" name="grado_complejidad" class="form-control" id="" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <label for="Descripcion_proyecto" class="form-label">Descripcion del proyecto</label>
+                {% comment %} <input type="text" class="form-control" id="lastName" placeholder="" value="" required> {% endcomment %}
+                <textarea class="form-control" name="descripcion_proyecto" aria-label="With textarea"></textarea>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Visita de campo</label>
+                <select class="form-select" name="visita_campo" id="" required>
+                  <option value="" >Seleccionar...</option>
+                  <option value="No">No</option>
+                  <option value="Si">Si</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" name="estado"id="" required>
+                  <option value="">Seleccionar...</option>
+                  <option >EN PROCESO</option>
+                  <option>TERMINADA</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Fecha de salida</label>
+                <input type="date" name="fecha_salida" class="form-control" id="" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+  
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </form>
+          <a class="btn btn-warning btn-lg my-3 w-100" href="{% url 'dibujantes:principal' %}"> Regresar a pagina principal</a>
+        </div>
+      </div>
+
+
+{% endblock container %}

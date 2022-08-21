@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block container %}
+    <div class="container-fluid py-3 d-flex flex-column">
+      <a class="btn btn-outline-primary my-2" href="{% url 'dibujantes:buscar' %}">Ver todos</a>
+      <a class="btn btn-outline-primary my-2" href="{% url 'dibujantes:busqueda' %}">Buscar proyecto</a>
+      <a class="btn btn-outline-primary my-2" href="{% url 'dibujantes:crear' %}">Crear proyecto</a>
+    </div>
+{% endblock container %}
