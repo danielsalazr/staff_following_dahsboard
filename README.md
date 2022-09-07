@@ -1,4 +1,4 @@
-#Seguimiento de Proyectos
+# Seguimiento de Proyectos
 Este programa ha sido creado para contribuir a una necesidad empresarial donde se utiliza excel para llevar el control de entregables de actividades del personal, sin embargo no es posible que mas de dos personas accedan a la informacion y la modifiquen, aqui se resuelve un problema trivial de falta de accesibilidad y se crea una aplicacion web con Django, Html y Bootstrap para un desarrollo rapido.
                 
 ----
