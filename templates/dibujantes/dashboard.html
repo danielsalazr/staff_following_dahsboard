@@ -25,9 +25,7 @@
                         <th scope="col">estado</th>
                         <th scope="col">fecha_salida</th>
                     </tr>
-                </thead>
-
-                
+                </thead>    
                 <tbody>
                     {% for rows in busqueda  %}
                     <tr>
@@ -36,12 +34,12 @@
                         <td>{{rows.version}}</td>
                         <td>{{rows.fecha_ingreso}}</td>
                         <td>{{rows.prioridad}}</td>
-                        <td>{{rows.cotizacion}}</td>
-                        <td>{{rows.dibujante}}</td>
+                        <td>{{rows.dibujante}}</td>                    
                         <td>{{rows.cliente_interno}}</td>
                         <td>{{rows.cliente_externo}}</td>
                         <td>{{rows.zona_venta}}</td>
                         <td>{{rows.descripcion_proyecto}}</td>
+                        <td>{{rows.grado_complejidad}}</td>
                         <td>{{rows.visita_campo}}</td>
                         <td>{{rows.estado}}</td>
                         <td>{{rows.fecha_salida}}</td>

@@ -46,19 +46,22 @@ def buscar(request):
         dibujante_asignado=''
         cliente_asignado=''
         cotizacion_asignada=''
+        descripcion=''
 
         if parametro == 'Dibujante':
-            dibujante_asignado = busqueda
+            #dibujante_asignado = busqueda
+            descripcion = busqueda
         elif parametro == 'Cliente':
             cliente_asignado = busqueda
         elif parametro == '# Cotizacion':
             cotizacion_asignada = busqueda
             
-        try:   
-            busqueda = ProyectosDibujantes.objects.filter(dibujante__contains=dibujante_asignado, cliente_externo__contains= cliente_asignado,cotizacion=cotizacion_asignada )
+        #try:   
+        busqueda = ProyectosDibujantes.objects.filter(dibujante__contains=dibujante_asignado, cliente_externo__contains= cliente_asignado,cotizacion__contains=cotizacion_asignada,descripcion_proyecto__contains= descripcion  )
+        print(busqueda)
             #get_object_or_404(ProyectosDibujantes, dibujante__contains=dibujante_asignado, cliente_externo__contains= cliente_asignado,cotizacion=cotizacion_asignada)
-        except:
-            raise Http404("Solicitud no encontrada, verifique e intente nuevamente")
+        #except:
+        #    raise Http404("Solicitud no encontrada, verifique e intente nuevamente")
         print('this')
     else:
         busqueda = ProyectosDibujantes.objects.all()
