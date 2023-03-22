@@ -58,15 +58,15 @@ def buscar(request):
             
         #try:   
         busqueda = ProyectosDibujantes.objects.filter(dibujante__contains=dibujante_asignado, cliente_externo__contains= cliente_asignado,cotizacion__contains=cotizacion_asignada,descripcion_proyecto__contains= descripcion  )
-        print(busqueda)
+        # print(busqueda)
             #get_object_or_404(ProyectosDibujantes, dibujante__contains=dibujante_asignado, cliente_externo__contains= cliente_asignado,cotizacion=cotizacion_asignada)
         #except:
         #    raise Http404("Solicitud no encontrada, verifique e intente nuevamente")
-        print('this')
+        # print('this')
     else:
         busqueda = ProyectosDibujantes.objects.all()
-        print('that')
-    print(busqueda)
+        # print('that')
+    # print(busqueda)
     return render(request, 'dibujantes/dashboard.html', {'busqueda': busqueda})
 
 def retorno_busqueda(request):
